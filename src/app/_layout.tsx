@@ -1,8 +1,10 @@
+import '../../global.css';
 import React from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet } from 'react-native';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { useAuthListener } from '@/hooks/useAuth';
@@ -53,11 +55,13 @@ function AppInner() {
 export default function RootLayout() {
   return (
     <GestureHandlerRootView style={styles.root}>
-      <ErrorBoundary>
-        <QueryClientProvider client={queryClient}>
-          <AppInner />
-        </QueryClientProvider>
-      </ErrorBoundary>
+      <SafeAreaProvider>
+        <ErrorBoundary>
+          <QueryClientProvider client={queryClient}>
+            <AppInner />
+          </QueryClientProvider>
+        </ErrorBoundary>
+      </SafeAreaProvider>
     </GestureHandlerRootView>
   );
 }

@@ -31,6 +31,7 @@
       ["expo-router", { "root": "src/app" }],
       "expo-status-bar",
       "expo-image",
+      "expo-image-picker",
       "expo-secure-store",
       "expo-video",
       "expo-sharing",

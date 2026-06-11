@@ -72,7 +72,10 @@ export function usePushNotifications() {
             title: remoteMessage.notification.title ?? 'TI Junction',
             body: remoteMessage.notification.body ?? '',
           },
-          trigger: null,
+          trigger: {
+            type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+            seconds: 1,
+          },
         });
       }
     });

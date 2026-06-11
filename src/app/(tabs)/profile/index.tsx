@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { View, ScrollView, StyleSheet, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
-import { FlashList } from '@shopify/flash-list';
 import { useAuthStore } from '@/store/authStore';
 import { useUserPosts } from '@/hooks/useProfile';
 import { signOut } from '@/services/authService';
