@@ -54,6 +54,13 @@
         }
       ]
     ],
+    "owner": "your-expo-username",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/your-project-id"
+    },
     "extra": {
       "eas": {
         "projectId": "your-project-id"
